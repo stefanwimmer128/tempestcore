@@ -1,0 +1,7 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:eu.stefanwimmer128.tempestcore.api.utils$creativeTab#net.minecraft.block.Blockeu.stefanwimmer128.tempestcore.api.utils/net.minecraft.block.-block/creative-tab.html
+eu.stefanwimmer128.tempestcore
+eu.stefanwimmer128.tempestcore.api
+eu.stefanwimmer128.tempestcore.api.registry
+eu.stefanwimmer128.tempestcore.api.utils

@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Registry - tempestcore_1.12.2-1.0.0</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">tempestcore_1.12.2-1.0.0</a>&nbsp;/&nbsp;<a href="../index.html">eu.stefanwimmer128.tempestcore.api.registry</a>&nbsp;/&nbsp;<a href="./index.html">Registry</a><br/>
+<br/>
+<h1>Registry</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Registry</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">IForgeRegistryEntry</span><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Registry to manage blocks / items / etc.</p>
+<h3>Parameters</h3>
+<p><a name="T"></a>
+<code>T</code> - Type of entries (must be subtype of <a href="#">net.minecraftforge.registries.IForgeRegistryEntry</a></p>
+<p><a name="resourceDomain"></a>
+<code>resourceDomain</code> - Resource domain to use for model registration (typically modid)</p>
+<p><a name="registry"></a>
+<code>registry</code> - Pass another Map (Registry) to prepopulate this registry</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Registry</span><span class="symbol">(</span><span class="identifier" id="eu.stefanwimmer128.tempestcore.api.registry.Registry$<init>(kotlin.String, kotlin.collections.MutableMap((kotlin.String, eu.stefanwimmer128.tempestcore.api.registry.Registry.T)))/resourceDomain">resourceDomain</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="eu.stefanwimmer128.tempestcore.api.registry.Registry$<init>(kotlin.String, kotlin.collections.MutableMap((kotlin.String, eu.stefanwimmer128.tempestcore.api.registry.Registry.T)))/registry">registry</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;mutableMapOf()<span class="symbol">)</span></code>
+<p>Registry to manage blocks / items / etc.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="on-add-listeners.html">onAddListeners</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">onAddListeners</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><span class="identifier">entry</span><span class="symbol">:</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code>
+<p>List of listeners for entry add (called by <a href="add.html">add</a>)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="resource-domain.html">resourceDomain</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">resourceDomain</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Resource domain to use for model registration (typically modid)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span> <span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="eu.stefanwimmer128.tempestcore.api.registry.Registry$add(eu.stefanwimmer128.tempestcore.api.registry.Registry.add.R, kotlin.String)/entry">entry</span><span class="symbol">:</span>&nbsp;<a href="add.html#R"><span class="identifier">R</span></a><span class="symbol">, </span><span class="identifier" id="eu.stefanwimmer128.tempestcore.api.registry.Registry$add(eu.stefanwimmer128.tempestcore.api.registry.Registry.add.R, kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;entry.registryName!!.resourcePath<span class="symbol">)</span><span class="symbol">: </span><a href="add.html#R"><span class="identifier">R</span></a></code>
+<p>Adds entry to the registry</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="all.html">all</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">all</span><span class="symbol">(</span><span class="identifier" id="eu.stefanwimmer128.tempestcore.api.registry.Registry$all(kotlin.Function2((eu.stefanwimmer128.tempestcore.api.registry.Registry.T, kotlin.String, kotlin.Unit)))/receiver">receiver</span><span class="symbol">:</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="identifier">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Registry</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Iterate all entries</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="register-entries.html">registerEntries</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">registerEntries</span><span class="symbol">(</span><span class="identifier" id="eu.stefanwimmer128.tempestcore.api.registry.Registry$registerEntries(net.minecraftforge.registries.IForgeRegistry((eu.stefanwimmer128.tempestcore.api.registry.Registry.T)))/registry">registry</span><span class="symbol">:</span>&nbsp;<span class="identifier">IForgeRegistry</span><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Pass Forge Registry to register entries</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="register-models.html">registerModels</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">registerModels</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Register Models for entries</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
