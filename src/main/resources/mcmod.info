@@ -1,0 +1,20 @@
+[
+    {
+        "modid": "tempestcore",
+        "name": "TempestCore",
+        "description": "A small but useful library",
+        "version": "${version}",
+        "mcversion": "${mcversion}",
+        "url": "https://minecraft.curseforge.com/projects/tempestcore",
+        "updateUrl": "https://raw.githubusercontent.com/stefanwimmer128/temptestcore/master/versions.json",
+        "authorList": [
+            "Stefan Wimmer <info@stefanwimmer128.eu>"
+        ],
+        "credits": "Copyright (c) 2019, Stefan Wimmer <info@stefanwimmer128.eu>",
+        "logoFile": "logo.png",
+        "screenshots": [],
+        "dependencies": [
+            "forgelin"
+        ]
+    }
+]
